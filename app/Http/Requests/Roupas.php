@@ -29,9 +29,9 @@ class Roupas extends FormRequest
             'tamanho'=>'required',
             'cor'=>'required',
             'categoria'=>'required',
-            'fabricação'=>'required',
-            'estação'=>'required',
-            'descrição'=>'required'
+            'fabricacao'=>'required',
+            'estacao'=>'required',
+            'descricao'=>'required'
         ];
     }
 
@@ -47,9 +47,9 @@ class Roupas extends FormRequest
             'tamanho.required' => 'tamanho obrigatório',
             'cor.required' => 'cor obrigatória',
             'categoria.required' => 'categoria obrigatório',
-            'fabricação.required' => 'fabricação obrigatória',
-            'estação.required' => 'estação obrigatória',
-            'descrição.required' => 'descrição obrigatória',
+            'fabricacao.required' => 'fabricação obrigatória',
+            'estacao.required' => 'estação obrigatória',
+            'descricao.required' => 'descrição obrigatória',
         ];
     }
 }
