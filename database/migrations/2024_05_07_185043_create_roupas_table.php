@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('roupas', function (Blueprint $table) {
             $table->id();
-            $table->string('tecido')->nullable(false);
-            $table->string('tamanho')->nullable(false);
+            $table->string('tecido',50)->nullable(false);
+            $table->string('tamanho',5)->nullable(false);
             $table->string('cor')->nullable(false);
-            $table->string('categoria')->nullable(false);
-            $table->string('fabricacao')->nullable(false);
+            $table->string('categoria',10)->nullable(false);
+            $table->string('fabricacao',10)->nullable(false);
             $table->string('estacao')->nullable(false);
-            $table->string('descricao')->nullable(false);
+            $table->string('descricao',50)->nullable(false);
             $table->timestamps();
         });
     }

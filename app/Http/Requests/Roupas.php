@@ -25,13 +25,13 @@ class Roupas extends FormRequest
     public function rules(): array
     {
         return [
-            'tecido'=>'required',
-            'tamanho'=>'required',
+            'tecido'=>'required|max:50|min:3',
+            'tamanho'=>'required|max:5|min:1',
             'cor'=>'required',
-            'categoria'=>'required',
-            'fabricacao'=>'required',
+            'categoria'=>'required|max:10|min:5',
+            'fabricacao'=>'required|max:10|min:2',
             'estacao'=>'required',
-            'descricao'=>'required'
+            'descricao'=>'required|max:50|min:10'
         ];
     }
 
@@ -44,12 +44,22 @@ class Roupas extends FormRequest
     public function messages(){
         return [
             'tecido.required' => 'obrigatório',
+            'tecido.max' => 'o campo tecido pode conter no maximo 50 caracteres',
+            'tecido.min' => 'o campo tecido pode conter no minimo 3 caracteres',
             'tamanho.required' => 'tamanho obrigatório',
+            'tamanho.max' => 'o campo tamanho pode conter no maximo 5 caracteres',
+            'tamanho.min' => 'o campo tamanho pode conter no minimo 1 caracteres',
             'cor.required' => 'cor obrigatória',
             'categoria.required' => 'categoria obrigatório',
+            'categoria.max' => 'o campo categoria pode conter no maximo 10 caracteres',
+            'categoria.min' => 'o campo categoria pode conter no minimo 5 caracteres',
             'fabricacao.required' => 'fabricação obrigatória',
+            'fabricacao.max' => 'o campo fabricacao pode conter no maximo 10 caracteres ',
+            'fabricacao.min' => 'o campo fabricacao pode conter no minimo 2 caracteres ',
             'estacao.required' => 'estação obrigatória',
             'descricao.required' => 'descrição obrigatória',
+            'descricao.max' => 'o campo descricao pode conter no maximo 50 caracteres',
+            'descricao.min' => 'o campo descricao pode conter no minimo 10 caracteres',
         ];
     }
 }
