@@ -5,7 +5,7 @@ use App\Http\Controllers\RoupasController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::post('cadastroRoupas',[RoupasController::class, 'cadastroRoupas']);
+Route::post('cadastroProduto',[RoupasController::class, 'cadastroProduto']);
 
 Route::get('pesquisarPorCategoria',[RoupasController::class, 'pesquisarPorCategoria']);
 
