@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class RoupasController extends Controller
 {
-    public function cadastroRoupas(RequestsRoupas $request)
+    public function cadastroProduto(RequestsRoupas $request)
     {
         $roupas = Roupas::create([
         'tecido' => $request->tecido,
