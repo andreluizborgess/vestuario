@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Roupas as RequestsRoupas;
 use App\Http\Requests\RoupasRequest;
-use App\Models\Roupa;
 use App\Models\Roupas;
 use Illuminate\Http\Request;
 
 class RoupasController extends Controller
 {
-    public function cadastroProduto(RequestsRoupas $request)
+    public function cadastroProduto(Request $request)
     {
+        return $request->all();
         $roupas = Roupas::create([
         'tecido' => $request->tecido,
         'tamanho' => $request->tamanho,
